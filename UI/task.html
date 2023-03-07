@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>EasyTask</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <header__logo class="logo">
+                    <img src="../assets/img/logo.svg" alt="" class="logo__img">
+                    <h1 class="logo__name">EasyTask</h1>
+                </header__logo>
+                <div class="header__user user">
+                    <a href="./user.html" class="user__name">Alex</a>
+                    <img src="" alt="" class="user__img">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <nav class="main__nav nav">
+                    <a href="./index.html" class="nav__item">к списку задач</a>
+                </nav>
+                <section class="main__task task">
+                    <div class="task__wrapper _todo">
+                        <div class="task__about">
+                            <p class="task__board">To Do</p>
+                            <div class="card__control control">
+                                <button class="control_edit"></button>
+                                <button class="control_delete"></button>
+                            </div>
+                        </div>
+                        <a class="cards__item card">
+                            <div class="card__wrapper task-card__wrapper">
+                                <div class="card__description
+                                    description">
+                                    <p class="description__date">05.03.23</p>
+                                    <p class="description__time">14:00</p>
+                                </div>
+                                <p class="card__username">Alex</p>
+                                <p class="card__title">Разработать
+                                    дизайн главной страницы</p>
+                                <p class="card__text">Выбрать цветовую
+                                    палитру, разработать прототип и
+                                    оформить
+                                    в соответсвии с выбранной палитрой
+                                    ...</p>
+                                <div class="card__information
+                                    information">
+                                    <p class="information__priority
+                                        priority priority_high">High</p>
+                                    <p class="information__access
+                                        _public">Public</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="main__comments commentsblock">
+                    <div class="commentsblock__wrapper">
+                        <div class="commentsblock__header">
+                            <p class="commentsblock__amount">2</p>
+                            <p class="commentsblock__title">Комментарии</p>
+                        </div>
+                        <div class="commentsblock__comments comments">
+                            <div class="comments__item comment">
+                                <div class="comment__wrapper">
+                                    <p class="comment__user">Alex</p>
+                                    <div class="comment__description
+                                        description">
+                                        <p class="description__date">05.03.23</p>
+                                        <p class="description__time">14:00</p>
+                                    </div>
+                                    <div class="comment__text">Время выполнения
+                                        задачи разбито на 5 дней. Выбрать
+                                        цветовую палитру, разработать прототип и
+                                        оформить в соответсвии с выбранной
+                                        палитрой.</div>
+                                </div>
+                            </div>
+                            <div class="comments__item comment">
+                                <div class="comment__wrapper">
+                                    <p class="comment__user">Alex</p>
+                                    <div class="comment__description
+                                        description">
+                                        <p class="description__date">05.03.23</p>
+                                        <p class="description__time">14:00</p>
+                                    </div>
+                                    <div class="comment__text">Время выполнения
+                                        задачи разбито на 5 дней. Выбрать
+                                        цветовую палитру, разработать прототип и
+                                        оформить в соответсвии с выбранной
+                                        палитрой.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commentsblock__newcomment newcomment">
+                            <div class="newcomment__wrapper">
+                                <p class="newcomment__title">Добавить
+                                    комментарий</p>
+                                <input type="text" name="comment" id=""
+                                    placeholder="текст комментария"
+                                    class="newcomment__input">
+                                <button type="button"
+                                    class="newcomment__button">добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__aboutapp aboutapp">
+                    <p class="aboutapp__item">EasyTask</p>
+                    <p class="aboutapp__item">Irina Derecha</p>
+                    <p class="aboutapp__item">derecha.irina01@gmail.com</p>
+                </div>
+                <p class="footer__data">05.03.2022</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>EasyTask</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <header__logo class="logo">
+                    <img src="../assets/img/logo.svg" alt="" class="logo__img">
+                    <h1 class="logo__name">EasyTask</h1>
+                </header__logo>
+                <div class="header__user user">
+                    <a href="./user.html" class="user__name">Alex</a>
+                    <img src="" alt="" class="user__img">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__filter filter">
+                    <div class="filter__wrapper">
+                        <div class="filter__header">
+                            <p class="filter__name">Фильтрация</p>
+                            <input type="search" name="search"
+                                placeholder='Введите название задачи'
+                                class="filter__search">
+                        </div>
+                        <div class="filter__items">
+                            <div class="filter__fields">
+                                <div class="filter__item item">
+                                    <p class="item__name">исполнитель</p>
+                                    <select name="userfilter" id=""
+                                        class="item__select">
+                                        <option value="choose">выбрать</option>
+                                        <option value="Alex">Alex</option>
+                                        <option value="Nick">Nick</option>
+                                    </select>
+                                </div>
+                                <div class="filter__item item">
+                                    <p class="item__name">дата добавления</p>
+                                    <div class="item__range range">
+                                        <input class="range__item"
+                                            placeholder="от" type="text"
+                                            onfocus="this.type='date'"
+                                            onblur="if(this.value==''){this.type='text'}">
+                                        <input class="range__item"
+                                            placeholder="до" type="text"
+                                            onfocus="this.type='date'"
+                                            onblur="if(this.value==''){this.type='text'}">
+                                    </div>
+                                </div>
+                                <div class="filter__item item">
+                                    <p class="item__name">время добавления</p>
+                                    <div class="item__range range">
+                                        <input class="range__item"
+                                            placeholder="от" type="text"
+                                            onfocus="this.type='time'"
+                                            onblur="if(this.value==''){this.type='text'}">
+                                        <input class="range__item"
+                                            placeholder="до" type="text"
+                                            onfocus="this.type='time'"
+                                            onblur="if(this.value==''){this.type='text'}">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="filter__btn">
+                                <div class="filter__item item">
+                                    <p class="item__name">приоритет выполнения</p>
+                                    <div class="item__group group-btn">
+                                        <div class="group-btn__item priority
+                                            priority_high">High</div>
+                                        <div class="group-btn__item priority
+                                            priority_medium">Medium</div>
+                                        <div class="group-btn__item priority
+                                            priority_low">Low</div>
+                                    </div>
+                                </div>
+                                <div class="filter__item item">
+                                    <p class="item__name">приватность</p>
+                                    <div class="item__group group-btn">
+                                        <div class="group-btn__item access">все</div>
+                                        <div class="group-btn__item access">личные</div>
+                                        <div class="group-btn__item access">общедоступные</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="filter__button" type="button">СБРОС</button>
+                    </div>
+                </div>
+                <div class="main__viewbtn viewbtn">
+                    <button class="viewbtn__button viewbtn__button_column _active" disabled></button>
+                    <button class="viewbtn__button viewbtn__button_row"></button>
+                </div>
+                <section class="main__board boards">
+                    <div class="boards__item board _todo">
+                        <div class="board__wrapper">
+                            <div class="board__header">
+                                <p class="board__amount _todo">3</p>
+                                <p class="board__name _todo">To Do</p>
+                                <button type="button" class="board__plus">
+                                </button>
+                            </div>
+                            <div class="board__cards cards">
+                                <a href="./task.html" class="cards__item card">
+                                    <div class="card__wrapper">
+                                        <div class="card__control control">
+                                            <button class="control_edit"></button>
+                                            <button class="control_delete"></button>
+                                        </div>
+                                        <div class="card__description
+                                            description">
+                                            <p class="description__date">05.03.23</p>
+                                            <p class="description__time">14:00</p>
+                                            <div class="description__board">To
+                                                Do</div>
+                                        </div>
+                                        <p class="card__username">Alex</p>
+                                        <p class="card__title">Разработать
+                                            дизайн главной страницы</p>
+                                        <p class="card__text">Выбрать цветовую
+                                            палитру, разработать прототип и
+                                            оформить
+                                            в соответсвии с выбранной палитрой
+                                            ...</p>
+                                        <div class="card__information
+                                            information">
+                                            <p class="information__comment
+                                                information__comment_todo">3</p>
+                                            <p class="information__priority
+                                                priority priority_high">High</p>
+                                            <p class="information__access
+                                                _public">Public</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cards__item card">
+                                    <div class="card__wrapper">
+                                        <div class="card__control control">
+                                            <button class="control_edit"></button>
+                                            <button class="control_delete"></button>
+                                        </div>
+                                        <div class="card__description
+                                            description">
+                                            <p class="description__date">05.03.23</p>
+                                            <p class="description__time">14:00</p>
+                                            <div class="description__board">To
+                                                Do</div>
+                                        </div>
+                                        <p class="card__username">Alex</p>
+                                        <p class="card__title">Разработать
+                                            дизайн главной страницы</p>
+                                        <p class="card__text">Выбрать цветовую
+                                            палитру, разработать прототип и
+                                            оформить
+                                            в соответсвии с выбранной палитрой
+                                            ...</p>
+                                        <div class="card__information
+                                            information">
+                                            <p class="information__comment
+                                                information__comment_todo">3</p>
+                                            <p class="information__priority
+                                                priority priority_high">High</p>
+                                            <p class="information__access
+                                                _public">Public</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <button class="board__addcard" type="button">Добавить
+                                новую задачу</button>
+                        </div>
+                    </div>
+                    <div class="boards__item board _process">
+                        <div class="board__wrapper">
+                            <div class="board__header">
+                                <p class="board__amount _process">2</p>
+                                <p class="board__name _process">Process</p>
+                            </div>
+                            <div class="board__cards cards">
+                                <a class="cards__item card">
+                                    <div class="card__wrapper">
+                                        <div class="card__control control">
+                                            <button class="control_edit"></button>
+                                            <button class="control_delete"></button>
+                                        </div>
+                                        <div class="card__description
+                                            description">
+                                            <p class="description__date">05.03.23</p>
+                                            <p class="description__time">14:00</p>
+                                            <div class="description__board">Process</div>
+                                        </div>
+                                        <p class="card__username">Alex</p>
+                                        <p class="card__title">Разработать
+                                            дизайн главной страницы</p>
+                                        <p class="card__text">Выбрать цветовую
+                                            палитру, разработать прототип и
+                                            оформить
+                                            в соответсвии с выбранной палитрой
+                                            ...</p>
+                                        <div class="card__information
+                                            information">
+                                            <p class="information__comment
+                                                information__comment_process">3</p>
+                                            <p class="information__priority
+                                                priority priority_high">High</p>
+                                            <p class="information__access
+                                                _public">Public</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cards__item card">
+                                    <div class="card__wrapper">
+                                        <div class="card__control control">
+                                            <button class="control_edit"></button>
+                                            <button class="control_delete"></button>
+                                        </div>
+                                        <div class="card__description
+                                            description">
+                                            <p class="description__date">05.03.23</p>
+                                            <p class="description__time">14:00</p>
+                                            <div class="description__board">Process</div>
+                                        </div>
+                                        <p class="card__username">Alex</p>
+                                        <p class="card__title">Разработать
+                                            дизайн главной страницы</p>
+                                        <p class="card__text">Выбрать цветовую
+                                            палитру, разработать прототип и
+                                            оформить
+                                            в соответсвии с выбранной палитрой
+                                            ...</p>
+                                        <div class="card__information
+                                            information">
+                                            <p class="information__comment
+                                                information__comment_process">3</p>
+                                            <p class="information__priority
+                                                priority priority_low">Low</p>
+                                            <p class="information__access
+                                                _public">Public</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boards__item board _complete">
+                        <a class="board__wrapper">
+                            <div class="board__header">
+                                <p class="board__amount _complete">1</p>
+                                <p class="board__name _complete">Complete</p>
+                            </div>
+                            <div class="board__cards cards">
+                                <div class="cards__item card">
+                                    <div class="card__wrapper">
+                                        <div class="card__control control">
+                                            <button class="control_edit"></button>
+                                            <button class="control_delete"></button>
+                                        </div>
+                                        <div class="card__description
+                                            description">
+                                            <p class="description__date">05.03.23</p>
+                                            <p class="description__time">14:00</p>
+                                            <div class="description__board">Complete</div>
+                                        </div>
+                                        <p class="card__username">Alex</p>
+                                        <p class="card__title">Разработать
+                                            дизайн главной страницы</p>
+                                        <p class="card__text">Выбрать цветовую
+                                            палитру, разработать прототип и
+                                            оформить
+                                            в соответсвии с выбранной палитрой
+                                            ...</p>
+                                        <div class="card__information
+                                            information">
+                                            <p class="information__comment
+                                                information__comment_complete">3</p>
+                                            <p class="information__priority
+                                                priority priority_high">High</p>
+                                            <p class="information__access
+                                                _public">Public</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__aboutapp aboutapp">
+                    <p class="aboutapp__item">EasyTask</p>
+                    <p class="aboutapp__item">Irina Derecha</p>
+                    <p class="aboutapp__item">derecha.irina01@gmail.com</p>
+                </div>
+                <p class="footer__data">05.03.2022</p>
+            </div>
+        </footer>
+    </body>
+</html>
