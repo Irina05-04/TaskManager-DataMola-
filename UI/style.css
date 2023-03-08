@@ -39,7 +39,7 @@
   margin-left: 0;
   margin-right: 0;
   cursor: pointer;
-  font: 600 16px/150% 0, 2px;
+  font: 600 16px/150% 0.2px;
   text-transform: uppercase;
   color: white;
   background-color: #7F76B2;
@@ -164,6 +164,12 @@ body {
   .main__profile {
     margin-top: 3.2rem;
   }
+}
+.main__button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4.8rem;
+  padding: 1.1rem 7rem;
 }
 
 .filter {
@@ -580,6 +586,11 @@ body {
   line-height: 2.5rem;
   padding: 0 12px;
   border-radius: 5px;
+}
+
+._private {
+  color: #831515;
+  background-color: #eb711f;
 }
 
 .information {
