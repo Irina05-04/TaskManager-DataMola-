@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Montserrat", sans-serif;
+}
+[class*=__button] {
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body{
+    background-color: antiquewhite;
+}
+.main{
+    margin-top: 64px;
+}
+.main__container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card{
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.card__container{
+    padding: 20px;
+    display: flex;
+}
+.price{
+    position: relative;
+    padding-right: 20px;
+    border-right: 1px solid #e1e0e0;
+}
+.price__text{
+    padding-top: 14px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.price__button{
+    background-color: #ff6f32;
+    padding: 7px 20px;
+    transition: .3s;
+}
+.price__button:hover{
+    background-color: #ec6328;
+}
+.price__label{
+    position: absolute;
+    color: #fff;
+    background-color: #35c768;
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 3px 5px;
+    top: -25px;
+}
+.information{
+    padding-left: 20px;
+    flex-grow: 5;
+}
+.information__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.information__button{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.information__svg > svg {
+    fill: #A0B0B9;
+    transition: 0.3s;
+}
+.information__svg{
+    transition: 0.3s;
+}
+.information__svg:hover > svg  {
+    fill: #0c73fe;
+}
+.information__fly{
+    margin-top: 32px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.logo__img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+.logo__name{
+    color: rgb(11, 150, 212);
+}
+.fly{
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+}
+.fly:not(:last-child){
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d5d6d6;
+}
+.about__time{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.about__svg{
+    cursor: pointer;
+}
+.about__svg > svg{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #A0B0B9;
+    border-radius: 100%;
+    padding: 2px;
+    fill: #A0B0B9;
+    transition: .3s;
+}
+.about__svg:hover > svg{
+    fill: #0c73fe;
+    border-color: #0c73fe;
+    background-color: #d4e3f7;
+}
+
+.about__title{
+    font-weight: 400;
+    font-size: 28px;
+}
+.about__place{
+    margin-top: 12px;
+}
+.about__place,
+.about__date{
+    color: #A0B0B9;
+    font-size: 12px;
+}
+.about__date{
+    margin-top: 4px;
+}
+.path{
+    display: flex;
+    align-items: center;
+    flex-grow: 10;
+}
+.path__time{
+    font-size: 12px;
+    height: 30px;
+    color: #A0B0B9;
+    text-align: center;
+}
+.stop{
+    flex-grow: 50;
+}
+.way{
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+.end__way,
+.start__way{
+    background-color: #A0B0B9;
+    border: 1px solid #A0B0B9;
+}
+.end__way:hover,
+.start__way:hover{
+    border: 1px solid #ec6328;
+    background-color: #fff;
+}
+.place{
+    color: #0c73fe;
+    font-size: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.end__place{
+    text-align: right;
+}
+.start__svg,
+.end__svg{
+    height: 30px;
+    cursor: pointer;
+}
+.start__svg:hover > svg,
+.end__svg:hover > svg{
+    fill: #ec6328;
+}
+
+.start__svg:hover ~ .start__place,
+.end__svg:hover ~ .end__place{
+    color: #ec6328;
+}
+.start__place:hover ~ .start__svg ,
+.end__place:hover ~ .end__svg {
+    background-color: #ec6328;
+}
+.start__svg{
+    width: 50px;
+}
+.end__svg{
+    text-align: right;
+}
+.start__svg > svg{
+    transform: rotate(-25deg);
+    fill: #A0B0B9;
+    transition: .3s;
+}
+.end__svg > svg{
+    transform: rotate(25deg);
+    fill: #A0B0B9;
+    transition: .3s;
+}
+.stop__way > div{
+    height: 1px;
+    margin: 0 1px;
+    background-color: #A0B0B9;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 4px;
+}
+.stop__way:hover > div{
+    background-color: #ec6328;
+}
+.place:hover{
+    color: #ec6328;
+}
+.stop__way:hover + .stop__place{
+    color: #ec6328;
+}
+.stop__place:hover + .stop__way{
+    background-color: #ec6328;
+}
+.stop__place{
+    text-align: center;
+}
+.tooltip {
+    position: relative;
+}
+.tooltip .tooltiptext {
+    width: 200px;
+    position: absolute;
+    background-color: rgb(52, 52, 52);
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 2px;
+    padding: 10px 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .6s;
+    visibility: hidden;
+    bottom: calc(100% + 7px);
+    left: 50%;
+    margin-left: -100px;
+}
+
+.tooltiptext::after{
+    opacity: 0;
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(52, 52, 52) transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip:hover .tooltiptext::after {
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip .start__tooltiptext{
+    margin-left: -110px;
+}
+.tooltip .end__tooltiptext{
+    margin-left: -100px;
+
+}
