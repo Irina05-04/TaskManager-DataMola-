@@ -436,16 +436,12 @@
   font-size: 1.4rem;
   line-height: 2.5rem;
   font-weight: 600;
+  background-color: transparent !important;
 }
 
 ._public {
   color: var(--color-public);
   background-color: var(--color-publicbg);
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 2.5rem;
-  padding: 0 var(--padding);
-  border-radius: var(--border-radius-xs);
 }
 
 ._private {
@@ -486,7 +482,13 @@
   content: url("../../assets/img/commentComplete.svg");
   padding-right: var(--padding-xxs);
 }
-
+.information__access{
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  padding: 0 var(--padding);
+  border-radius: var(--border-radius-xs);
+}
 .nav__item {
   font-weight: 700;
   font-size: 1.8rem;
