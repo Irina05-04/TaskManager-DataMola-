@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 6.4rem;
+    max-height: 8rem;
+  }
+  .footer__container {
+    border-top: .1rem solid var(--light-grey);
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+  .footer__data {
+    display: block;
+    text-align: right;
+  }
+  .footer__aboutapp {
+    margin: var(--margin-xs) 0 var(--margin-xs) 0;
+  }
+  
+  .aboutapp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    -moz-column-gap: 3.2rem;
+         column-gap: 3.2rem;
+    color: var(--color-text);
+  }
+  .aboutapp__item {
+    font: 600 1.4rem/2.5rem;
+  }
