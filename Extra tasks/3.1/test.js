@@ -1,0 +1,13 @@
+const newList = new List(1);
+newList.addNode(3);
+newList.addNode(4);
+newList.addNode(5, 2);
+newList.addNode(6, 3);
+newList.addNode(7, 1);
+newList.removeNode();
+newList.removeNode(0);
+console.log(newList);
+newList.print();
+const testList = new List(2);
+testList.removeNode();
+console.log(testList);
