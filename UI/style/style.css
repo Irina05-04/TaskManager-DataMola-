@@ -331,7 +331,7 @@
   width: inherit;
   border: .2rem dashed var(--dark-red);
   border-radius: var(--border-radius);
-  padding: var(--padding-xs) var(--padding) var(--padding) var(--padding);
+  padding: var(--padding-xs) var(--padding);
   background-color: rgba(255, 255, 255, 0.4);
   color: var(--dark-red);
   font-weight: 700;
