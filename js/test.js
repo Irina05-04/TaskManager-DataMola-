@@ -1,17 +1,17 @@
-//user test
+// user test
 tasksModule.changeUser('Alex');
 console.log(tasksModule.user);
 tasksModule.changeUser('Nick');
 console.log(tasksModule.user);
 console.log('------------------------');
 
-//getTasks
+// getTasks
 console.log('getTasks(0,10)');
-console.log(tasksModule.getTasks(0,10));
+console.log(tasksModule.getTasks(0, 10));
 console.log('getTasks(5,10)');
-console.log(tasksModule.getTasks(5,10));
+console.log(tasksModule.getTasks(5, 10));
 console.log('getTasks(5,10,{assignee: "ал"})');
-console.log(tasksModule.getTasks(5,10,{assignee: 'ал'}));
+console.log(tasksModule.getTasks(5, 10, { assignee: 'ал' }));
 console.log('getTasks(5,10,{dateFrom: Date.now()})');
 console.log(tasksModule.getTasks(5,10,{dateFrom: Date.now()}));
 console.log('getTasks(0,10,{dateTo: Date.now()})');
