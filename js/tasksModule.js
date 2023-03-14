@@ -1,8 +1,21 @@
+const NAME_LENGTH = 100;
+const TEXT_LENGTH = 280;
+const STATUSES = {
+  toDo:'To Do',
+  inProgress:'In progress',
+  complete:'Complete',
+}
+const PRIORITY = {
+  high:'High',
+  medium:'Medium',
+  low:'Low',
+}
+console.log('lalalala');
+console.log()
 let tasksModule = (function(tasks) {
-    var user = 'Никита';
+    let user = 'Никита';
     function getTasks(skip, top, filterConfig){
-        let array = tasks.slice();
-        array.sort((a, b) => a.createdAt > b.createdAt ? 1 : -1);
+        let array = [...tasks];
         if(filterConfig){
             if(filterConfig.assignee){
                 array = array.filter(el => el.assignee.toLowerCase().includes(filterConfig.assignee.toLowerCase()));
@@ -19,22 +32,22 @@ let tasksModule = (function(tasks) {
             if(filterConfig.priority){
                 array = array.filter(el => el.priority === filterConfig.priority);
             }
-            if(filterConfig.isPrivate){
+            if(filterConfig.hasOwn(isPrivate)){
                 array = array.filter(el => el.isPrivate === filterConfig.isPrivate);
             }
             if(filterConfig.description){
                 array = array.filter(el => el.description.includes(filterConfig.description));
             }
         }
-        return array.slice(skip, top);
+        return array.slice(skip, top).sort((a, b) => new Date(a.createdAt).getTime() > new Date(b.createdAt).getTime() ? 1 : -1);
     }
     function getTask(id){
         return tasks.find(el => el.id === id);
     }
     function validateTask(task){
         if(!task.id || typeof task.id !== 'string') return false;
-        if(!task.name || typeof task.name !=='string' || task.name.length > 100) return false;
-        if(!task.description || typeof task.description !== 'string' || task.description > 280) return false;
+        if(!task.name || typeof task.name !=='string' || task.name.length > NAME_LENGTH) return false;
+        if(!task.description || typeof task.description !== 'string' || task.description > TEXT_LENGTH) return false;
         if(!task.createdAt || !Date.parse(task.createdAt)) return false;
         if(!task.assignee) return false;
         if(!task.status || typeof task.status !== 'string' || task.status.search(/\b(To Do|In progress|Complete)\b/) === -1) return false
@@ -44,7 +57,6 @@ let tasksModule = (function(tasks) {
         return true;
     }
     function addTask(name,description, assignee, status,priority,isPrivate){
-        //const id = (new Date()).toString();
         const id = (tasks.length + 1).toString();
         const createdAt = new Date();
         const comments = [];
@@ -59,11 +71,10 @@ let tasksModule = (function(tasks) {
             isPrivate,
             comments
         }
-        console.log(newTask);
         if(validateTask(newTask)){
             tasks = [...tasks, newTask];
             return true;
-        } else return false;
+        } return false;
     }
     function editTask(id, name, description, assignee, status, priority, isPrivate){
         let currentTask = getTask(id)
@@ -90,7 +101,7 @@ let tasksModule = (function(tasks) {
     }
     function validComment(com){
         if(!com.id || typeof com.id !== string) return false;
-        if(!com.text || typeof com.text !== string || com.text.length > 280) return false;
+        if(!com.text || typeof com.text !== string || com.text.length > TEXT_LENGTH) return false;
         if(!com.createdAt || typeof com.createdAt !== Date) return false;
         if(!com.author || typeof com.author !== string) return false;
         return true;

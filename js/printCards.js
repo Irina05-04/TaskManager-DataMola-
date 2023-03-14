@@ -6,7 +6,6 @@ let countTodo = document.getElementById('countTodo');
 let countProcess = document.getElementById('countProcess');
 let countComplete = document.getElementById('countComplete');
 
-console.log(inProcessBoard);
 arr.forEach((el) => {
   const card = document.createElement("a");
   card.setAttribute("href", "./task.html");

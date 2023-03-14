@@ -1,3 +1,20 @@
+:root{
+    --light-orange: #ec6328;
+    --color_white: #fff;
+    --dark-purple: #7F76B2;
+    --color-background: #faebd7;
+    --color-border: #e1e0e0;
+    --dark-orange: #ff6f32;
+    --color-green: #35c768;
+    --color-svg: #A0B0B9;
+    --color-blue: #0c73fe;
+    --light: #d5d6d6;
+    --color-tooltip: #343434;
+    --padding: 1rem;
+    --padding-xxs: calc((var(--padding)*0.5));
+    --padding-xs: calc((var(--padding)*2)); 
+    --padding-s: calc((var(--padding)*3)); 
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,63 +24,64 @@ html{
     font-family: "Montserrat", sans-serif;
 }
 [class*=__button] {
-    border-radius: 5px;
+    border-radius: .5rem;
     border: none;
-    color: #fff;
-    font-size: 16px;
+    color: var(--color_white);
+    font-size: 1.6rem;
     cursor: pointer;
 }
 
 body{
-    background-color: antiquewhite;
+    background-color: var(--color-background);
 }
 .main{
-    margin-top: 64px;
+    margin-top: 6.4rem;
 }
 .main__container{
-    max-width: 1000px;
+    max-width: 100rem;
     margin: 0 auto;
 }
 .card{
-    max-width: 700px;
-    background-color: #fff;
-    border-radius: 20px;
+    max-width: 70rem;
+    margin: 0 auto;
+    background-color: var(--color_white);
+    border-radius: 2rem;
 }
 .card__container{
-    padding: 20px;
+    padding: var(--padding-xs);
     display: flex;
 }
 .price{
     position: relative;
-    padding-right: 20px;
-    border-right: 1px solid #e1e0e0;
+    padding-right: var(--padding-xs);
+    border-right: .1rem solid var(--color-border);
 }
 .price__text{
-    padding-top: 14px;
+    padding-top: var(--padding);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
 }
 .price__button{
-    background-color: #ff6f32;
-    padding: 7px 20px;
+    background-color: var(--dark-orange);
+    padding: var(--padding) var(--padding-xs);
     transition: .3s;
 }
 .price__button:hover{
-    background-color: #ec6328;
+    background-color: var(--light-orange);
 }
 .price__label{
     position: absolute;
-    color: #fff;
-    background-color: #35c768;
-    border-radius: 15px;
-    font-size: 12px;
-    padding: 3px 5px;
-    top: -25px;
+    color: var(--color_white);
+    background-color: var(--color-green);
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    padding: var(--padding-xxs) var(--padding-xxs);
+    top: -2.5rem;
 }
 .information{
-    padding-left: 20px;
+    padding-left: var(--padding-xs);
     flex-grow: 5;
 }
 .information__header{
@@ -74,29 +92,29 @@ body{
 .information__button{
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: .8rem;
 }
 .information__svg > svg {
-    fill: #A0B0B9;
+    fill: var(--color-svg);
     transition: 0.3s;
 }
 .information__svg{
     transition: 0.3s;
 }
 .information__svg:hover > svg  {
-    fill: #0c73fe;
+    fill: var(--color-blue);
 }
 .information__fly{
-    margin-top: 32px;
+    margin-top: 3.3rem;
 }
 .logo{
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: .8rem;
 }
 .logo__img{
-    width: 32px;
-    height: 32px;
+    width: 3.3rem;
+    height: 3.2rem;
     border-radius: 100%;
 }
 .logo__name{
@@ -105,49 +123,49 @@ body{
 .fly{
     display: flex;
     align-items: center;
-    column-gap: 32px;
+    column-gap: 3.3rem;
 }
 .fly:not(:last-child){
-    padding-bottom: 20px;
-    border-bottom: 1px solid #d5d6d6;
+    padding-bottom: var(--padding-xs);
+    border-bottom: .1rem solid var(--light);
 }
 .about__time{
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: .8rem;
 }
 .about__svg{
     cursor: pointer;
 }
 .about__svg > svg{
-    width: 20px;
-    height: 20px;
-    border: 1px solid #A0B0B9;
+    width: 2rem;
+    height: 2rem;
+    border: .1rem solid var(--color-svg);
     border-radius: 100%;
-    padding: 2px;
-    fill: #A0B0B9;
+    padding: var(--padding-xxs);
+    fill: var(--color-svg);
     transition: .3s;
 }
 .about__svg:hover > svg{
-    fill: #0c73fe;
-    border-color: #0c73fe;
-    background-color: #d4e3f7;
+    fill: var(--color-blue);
+    border-color: var(--color-blue);
+    background-color: var(--light);
 }
 
 .about__title{
     font-weight: 400;
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 .about__place{
-    margin-top: 12px;
+    margin-top: 1.2rem;
 }
 .about__place,
 .about__date{
-    color: #A0B0B9;
-    font-size: 12px;
+    color: var(--color-svg);
+    font-size: 1.2rem;
 }
 .about__date{
-    margin-top: 4px;
+    margin-top: .4rem;
 }
 .path{
     display: flex;
@@ -155,34 +173,34 @@ body{
     flex-grow: 10;
 }
 .path__time{
-    font-size: 12px;
-    height: 30px;
-    color: #A0B0B9;
+    font-size: 1.2rem;
+    height: 3rem;
+    color: var(--color-svg);
     text-align: center;
 }
 .stop{
     flex-grow: 50;
 }
 .way{
-    height: 6px;
-    border-radius: 3px;
+    height: .6rem;
+    border-radius: .3rem;
     cursor: pointer;
     transition: .3s;
 }
 .end__way,
 .start__way{
-    background-color: #A0B0B9;
-    border: 1px solid #A0B0B9;
+    background-color: var(--color-svg);
+    border: .1rem solid var(--color-svg);
 }
 .end__way:hover,
 .start__way:hover{
-    border: 1px solid #ec6328;
-    background-color: #fff;
+    border: .1rem solid var(--light-orange);
+    background-color: var(--color_white);
 }
 .place{
-    color: #0c73fe;
-    font-size: 10px;
-    margin-top: 20px;
+    color: var(--color-blue);
+    font-size: 1rem;
+    margin-top: 2rem;
     cursor: pointer;
     transition: .3s;
 }
@@ -192,57 +210,57 @@ body{
 }
 .start__svg,
 .end__svg{
-    height: 30px;
+    height: 3rem;
     cursor: pointer;
 }
 .start__svg:hover > svg,
 .end__svg:hover > svg{
-    fill: #ec6328;
+    fill: var(--light-orange);
 }
 
 .start__svg:hover ~ .start__place,
 .end__svg:hover ~ .end__place{
-    color: #ec6328;
+    color: var(--light-orange);
 }
 .start__place:hover ~ .start__svg ,
 .end__place:hover ~ .end__svg {
-    background-color: #ec6328;
+    background-color: var(--light-orange);
 }
 .start__svg{
-    width: 50px;
+    width: 5rem;
 }
 .end__svg{
     text-align: right;
 }
 .start__svg > svg{
     transform: rotate(-25deg);
-    fill: #A0B0B9;
+    fill: var(--color-svg);
     transition: .3s;
 }
 .end__svg > svg{
     transform: rotate(25deg);
-    fill: #A0B0B9;
+    fill: var(--color-svg);
     transition: .3s;
 }
 .stop__way > div{
-    height: 1px;
-    margin: 0 1px;
-    background-color: #A0B0B9;
+    height: .1rem;
+    margin: 0 .1rem;
+    background-color: var(--color-svg);
     cursor: pointer;
     transition: .3s;
-    margin-top: 4px;
+    margin-top: .4rem;
 }
 .stop__way:hover > div{
-    background-color: #ec6328;
+    background-color: var(--light-orange);
 }
 .place:hover{
-    color: #ec6328;
+    color: var(--light-orange);
 }
 .stop__way:hover + .stop__place{
-    color: #ec6328;
+    color: var(--light-orange);
 }
 .stop__place:hover + .stop__way{
-    background-color: #ec6328;
+    background-color: var(--light-orange);
 }
 .stop__place{
     text-align: center;
@@ -251,21 +269,21 @@ body{
     position: relative;
 }
 .tooltip .tooltiptext {
-    width: 200px;
+    width: 20rem;
     position: absolute;
-    background-color: rgb(52, 52, 52);
-    color: #fff;
+    background-color: var(--color-tooltip);
+    color: var(--color_white);
     text-align: center;
-    font-size: 10px;
+    font-size: 1rem;
     border-radius: 2px;
-    padding: 10px 5px;
+    padding: var(--padding) var(--padding-xxs);
     z-index: 1;
     opacity: 0;
     transition: opacity .6s;
     visibility: hidden;
-    bottom: calc(100% + 7px);
+    bottom: calc(100% + .7rem);
     left: 50%;
-    margin-left: -100px;
+    margin-left: -10rem;
 }
 
 .tooltiptext::after{
@@ -275,10 +293,10 @@ body{
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    margin-left: -.5rem;
+    border-width:.5rem;
     border-style: solid;
-    border-color: rgb(52, 52, 52) transparent transparent transparent;
+    border-color: var(--color-tooltip) transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
     opacity: 1;
@@ -289,9 +307,15 @@ body{
     visibility: visible;
 }
 .tooltip .start__tooltiptext{
-    margin-left: -110px;
+    margin-left: -11rem;
 }
 .tooltip .end__tooltiptext{
-    margin-left: -100px;
+    margin-left: -10rem;
 
+}
+.w80{
+    width: 8rem;
+}
+.w40{
+    width: 4rem;
 }

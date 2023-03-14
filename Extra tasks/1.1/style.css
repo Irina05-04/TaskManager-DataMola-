@@ -1,15 +1,27 @@
+:root{
+    --light-purple: #D5CDFE;
+    --dark-purple: #7F76B2;
+    --color-white: #ffff;
+    --color-light: #ededed;
+    --color-background: rgba(0, 0, 0, 0.3);
+    --padding: 1rem;
+    --padding-xxs: calc((var(--padding)*0.5));
+    --padding-xs: calc((var(--padding)*2)); 
+    --padding-s: calc((var(--padding)*3)); 
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 [class*=__button] {
-    border-radius: 5px;
+    border-radius: .5rem;
     border: none;
-    background-color: rgb(168, 99, 233);
-    color: #fff;
-    font-size: 16px;
-    padding: 7px 20px;
+    background-color: var(--dark-purple);
+    color: var(--color-white);
+    font-size: 1.6rem;
+    padding: var(--padding-xxs) var(--padding-xs);
     cursor: pointer;
   }
   
@@ -17,54 +29,54 @@
     position: relative;
 }
 .main__content{
-    max-width: 800px;
+    max-width: 80rem;
     margin:  0 auto;
-    padding-top: 3rem;
+    padding-top: var(--padding-s);
 }
-.main__content > p {
+.main__text{
     margin-bottom: 2.4rem;
 }
 .modal{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+    background-color: var(--color-background);
+    backdrop-filter: blur(.5rem);
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
 }
 .modal__title{
-    padding-bottom: 12px;
-    border-bottom: 1px solid #ededed;
+    padding-bottom: var(--padding);
+    border-bottom: .1rem solid var(--color-light);
 }
 .modal__text{
-    padding-bottom: 12px;
-    border-bottom: 1px solid #ededed;
+    padding-bottom: var(--padding);
+    border-bottom: .1rem solid var(--color-light);
 }
 .modal__container{
     position: relative;
     max-width: 30rem;
-    background-color: #fff;
+    background-color:  var(--color-white);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 1rem;
+    padding: var(--padding);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    row-gap: 1.6rem;
 }
-.modal__groubbtn{
+.modal__group-btns{
     margin-left: auto;
 
 }
 .modal__button_light{
-    background-color: rgb(214, 181, 244);
+    background-color: var(--light-purple);
 }
 .modal__cross{
     position: absolute;
-    right: 15px;
-    font-size: 16px;
+    right: 1.5rem;
+    font-size: 1.6rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
