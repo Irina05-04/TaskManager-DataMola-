@@ -1,45 +1,28 @@
 /* eslint-disable prefer-rest-params */
 
-function mySum(a, b) {
-  return a + b;
-}
-function mySub(a, b) {
-  return a - b;
-}
-function mySubReverse(a, b) {
-  return -a + b;
-}
-function myMul(a, b) {
-  return a * b;
-}
-function myDiv(a, b) {
-  return a / b;
-}
-function myDivReverse(a, b) {
-  return b / a;
-}
 function add(...args) {
   if (args.length === 2) {
-    return mySum(args[0], args[1]);
-  } if (args.length === 1) return mySum.bind(null, args[0]);
+    return args[0] + args[1];
+  } if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc + el, initValue);
   return false;
 }
 function sub(...args) {
   if (args.length === 2) {
-    return mySub(args[0], args[1]);
-  } if (args.length === 1) return mySubReverse.bind(null, args[0]);
+    return args[0] - args[1];
+  }
+  if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc - el, initValue);
   return false;
 }
 function mul(...args) {
   if (args.length === 2) {
-    return myMul(args[0], args[1]);
-  } if (args.length === 1) return myMul.bind(null, args[0]);
+    return args[0] * args[1];
+  } if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc * el, initValue);
   return false;
 }
 function div(...args) {
   if (args.length === 2) {
-    return myDiv(args[0], args[1]);
-  } if (args.length === 1) return myDivReverse.bind(null, args[0]);
+    return args[0] / args[1];
+  } if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc / el, initValue);
   return false;
 }
 function pipe(...args) {
