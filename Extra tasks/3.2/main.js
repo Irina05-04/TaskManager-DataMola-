@@ -1,28 +1,26 @@
-/* eslint-disable prefer-rest-params */
-
 function add(...args) {
   if (args.length === 2) {
     return args[0] + args[1];
-  } if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc + el, initValue);
+  } if (args.length === 1) return (initValue) => initValue + args[0];
   return false;
 }
 function sub(...args) {
   if (args.length === 2) {
     return args[0] - args[1];
   }
-  if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc - el, initValue);
+  if (args.length === 1) return (initValue) => initValue - args[0];
   return false;
 }
 function mul(...args) {
   if (args.length === 2) {
     return args[0] * args[1];
-  } if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc * el, initValue);
+  } if (args.length === 1) return (initValue) => initValue * args[0];
   return false;
 }
 function div(...args) {
   if (args.length === 2) {
     return args[0] / args[1];
-  } if (args.length === 1) return (initValue) => args.reduce((acc, el) => acc / el, initValue);
+  } if (args.length === 1) return (initValue) => initValue / args[0];
   return false;
 }
 function pipe(...args) {
