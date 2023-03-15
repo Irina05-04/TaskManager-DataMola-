@@ -1,16 +1,5 @@
 const NAME_LENGTH = 100;
 const TEXT_LENGTH = 280;
-const STATUSES = {
-  toDo:'To Do',
-  inProgress:'In progress',
-  complete:'Complete',
-}
-const PRIORITY = {
-  high:'High',
-  medium:'Medium',
-  low:'Low',
-}
-console.log('lalalala');
 let tasksModule = (function(tasks) {
     let user = 'Никита';
     function getTasks(skip, top, filterConfig){
@@ -55,7 +44,7 @@ let tasksModule = (function(tasks) {
         if(!task.description || typeof task.description !== 'string' || task.description > TEXT_LENGTH) return false;
         if(!task.createdAt || !Date.parse(task.createdAt)) return false;
         if(!task.assignee) return false;
-        if(!task.status || typeof task.status !== 'string' || task.status.search(`/\b(${STATUSES.toDo}|In progress|Complete)\b/`) === -1) return false
+        if(!task.status || typeof task.status !== 'string' || task.status.search(/\b(To Do|In progress|Complete)\b/) === -1) return false
         if(!task.priority || typeof task.priority !== 'string' || task.priority.search(/\b(High|Medium|Low)\b/) === -1) return false;
         if(task.isPrivate === null || typeof task.isPrivate !== 'boolean') return false;       
         if(!Array.isArray(task.comments)) return false;

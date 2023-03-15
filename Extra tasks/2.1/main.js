@@ -1,4 +1,15 @@
 function continuousArr(arr){
+    let count = 0
+    for(let el of arr){
+        if(el < 0) count++;
+    }
+    if(count === arr.length){
+        let max = arr[0];
+        for(let el of arr){
+            if(el > max) max = el;
+        }
+        return max;
+    }
     let maxSum = 0;
     let currentSum = 0;
     for(let el of arr){
