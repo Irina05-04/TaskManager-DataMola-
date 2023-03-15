@@ -1,10 +1,6 @@
-/* eslint-disable no-underscore-dangle, no-undef */
-
 class TaskCollection {
-  // _user = '';
-
   get user() {
-    return this._user;
+    return this.user;
   }
 
   set user(value) {
@@ -64,33 +60,39 @@ class TaskCollection {
 
   getPage(skip, top, filterConfig) {
     let array = [...this._tasks];
-    array.sort((a, b) => (a.createdAt > b.createdAt ? 1 : -1));
     if (filterConfig) {
-      if (filterConfig.assignee) {
+      if (Object.hasOwn(filterConfig, 'assignee')) {
         array = array.filter((el) => el.assignee
           .toLowerCase()
           .includes(filterConfig.assignee.toLowerCase()));
       }
-      if (filterConfig.dateFrom) {
+      if (Object.hasOwn(filterConfig, 'dateFrom')) {
+        filterConfig.dateTo.setHours(0);
+        filterConfig.dateTo.setMinutes(0);
+        filterConfig.dateTo.setSeconds(1);
         array = array.filter((el) => el.createdAt > filterConfig.dateFrom);
       }
-      if (filterConfig.dateTo) {
+      if (Object.hasOwn(filterConfig, 'dateTo')) {
+        filterConfig.dateTo.setHours(23);
+        filterConfig.dateTo.setMinutes(59);
+        filterConfig.dateTo.setSeconds(59);
         array = array.filter((el) => el.createdAt < filterConfig.dateTo);
       }
-      if (filterConfig.status) {
+      if (Object.hasOwn(filterConfig, 'status')) {
         array = array.filter((el) => el.status === filterConfig.status);
       }
-      if (filterConfig.priority) {
+      if (Object.hasOwn(filterConfig, 'priority')) {
         array = array.filter((el) => el.priority === filterConfig.priority);
       }
-      if (filterConfig.isPrivate) {
+      if (Object.hasOwn(filterConfig, 'isPrivate')) {
         array = array.filter((el) => el.isPrivate === filterConfig.isPrivate);
       }
-      if (filterConfig.description) {
+      if (Object.hasOwn(filterConfig, 'description')) {
         array = array.filter((el) => el.description.includes(filterConfig.description));
       }
     }
-    return array.slice(skip, top);
+    return array.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
+      .slice(skip, top);
   }
 
   get(id) {

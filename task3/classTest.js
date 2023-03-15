@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 console.log('Test class test');
 const newTask = new Task('New tsk', 'description for new task', 'lola', 'To Do', 'High', false);
 console.log(newTask);

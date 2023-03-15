@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 class Task {
   get id() {
     return this._id;
@@ -31,11 +29,11 @@ class Task {
 
   static validate(task) {
     if (!task.id || typeof task.id !== 'string') return false;
-    if (!task.name || typeof task.name !== 'string' || this.name.length > 100) return false;
+    if (!task.name || typeof task.name !== 'string' || this.name.length > NAME_LENGTH) return false;
     if (
       !task.description
       || typeof task.description !== 'string'
-      || task.description > 280
+      || task.description > TEXT_LENGTH
     ) return false;
     if (!task.createdAt || !Date.parse(task.createdAt)) return false;
     if (!task.assignee) return false;

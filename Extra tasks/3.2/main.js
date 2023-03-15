@@ -43,10 +43,9 @@ function div(...args) {
   return false;
 }
 function pipe(...args) {
-  for (let i = 0; i < args.length; i += 1) {
-    console.log(args[i].bind(null));
-  }
+  return (initValue) => args.reduce((acc, el) => el(acc), initValue);
 }
+
 const sum1 = add(1);
 const c = sum1(2);
 console.log(add(2, 3));
@@ -68,7 +67,7 @@ const n2 = 2;
 const n3 = 3;
 const n4 = 2;
 const doSmth = pipe(add(n1), sub(n2), mul(n3), div(n4));
-//const result = doSmth(0);
-//console.log(result);
-// const x = pipe(add(1), mul(2))(3);
-// console.log(x);
+const result = doSmth(0);
+console.log(result);
+const x = pipe(add(1), mul(2))(3);
+console.log(x);

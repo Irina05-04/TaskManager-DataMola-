@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 class Comment {
   get id() {
     return this._id;
@@ -34,7 +32,7 @@ class Comment {
 
   static validate(comment) {
     if (!comment.id || typeof comment.id !== 'string') return false;
-    if (!comment.text || typeof comment.text !== 'string' || comment.text.length > 280) return false;
+    if (!comment.text || typeof comment.text !== 'string' || comment.text.length > TEXT_LENGTH) return false;
     if (!comment.createdAt || !Date.parse(comment.createdAt)) return false;
     if (!comment.author || typeof comment.author !== 'string') return false;
     return true;
